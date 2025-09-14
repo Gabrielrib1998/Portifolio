@@ -5,7 +5,7 @@
 Bem-vindo ao meu portfólio!  
 Este projeto foi desenvolvido para apresentar minhas habilidades, especialidades e projetos como **desenvolvedor web**.  
 
-🔗 **Acesse online**: https://portifolio-livid-sigma-88.vercel.app/
+🔗 **Acesse online**: https://portifolio-six-kohl.vercel.app
 
 ---
 
