@@ -716,12 +716,23 @@ footer .footer-email {
     word-break: break-all;
 }
 
-footer .btn-social {
-    justify-self: end;
-    display: flex;
-    gap: 16px;
-    align-items: center;
+#social-footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;   /* tamanho do botão */
+  height: 60px;
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
 }
+
+#social-footer a svg, 
+#social-footer a i { /* se forem ícones em <i> ou svg */
+  font-size: 29px;
+}
+
 
 @media (max-width: 900px) {
     footer .line-footer {
@@ -736,7 +747,7 @@ footer .btn-social {
     footer .footer-email,
     footer .btn-social {
         justify-self: center;
-        transform: translateY(15px);
+        
     }
     footer .logo-footer img {
         height: 70px;
