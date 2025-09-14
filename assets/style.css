@@ -5,14 +5,12 @@
     box-sizing: border-box;
   /* Define a família da fonte */
   font-family: 'Bitcount Grid Double', system-ui;
-
   /* Define o peso da fonte (opcional, pode ser de 100 a 900) */
   font-weight: 400; /* Você pode ajustar este valor */
-
   /* Aplica as configurações exatas da fonte variável da imagem */
   font-variation-settings: 
     "slnt" 0,
-    "CRSV" 8.5, /* Este é o eixo "Cursive" que você ajustou */
+    "CRSV" 8.5,
     "ELSH" 0,
     "ELXP" 0;
 }
@@ -29,7 +27,6 @@ body{
     display: flex;
     
 }
-/* Garanta que este código substitua o antigo */
 
 header {
   padding: 40px 4%;
@@ -37,20 +34,36 @@ header {
   position: relative; /* Mantém a referência para a curva */
   padding-bottom: 80px; 
 
-  /* IMPORTANTE: REMOVA a linha 'overflow: hidden;' se ela estiver aqui */
-  /* Ela estava cortando a curva que tentamos criar. */
 }
+@media (max-width: 900px) {
+  header nav,
+  header nav ul,
+  header nav ul li {
+    display: none !important;
+  }
 
+  header .logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  header > .interface {
+    justify-content: center;
+    align-items: center;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
 header::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 90px; /* A altura da sua curva */
-  background-color: #121214; /* Cor de fundo do body */
-  
-  /* A mágica da curva usando clip-path */
+  height: 90px; 
+  background-color: #121214; 
   clip-path: ellipse(50% 90% at 50% 100%);
 }
 header > .interface{
@@ -116,15 +129,70 @@ section.topo-do-site .flex{
 }
 @media (max-width: 900px) {
   section.topo-do-site .flex {
-    gap: 40px; /* reduzido para caber */
+    gap: 40px; 
   }
 }
+@media (max-width: 900px) {
+  section.topo-do-site .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .topo-do-site h1 {
+    font-size: 1.8rem;
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  .topo-do-site p {
+    font-size: 1rem;
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  .topo-do-site .btn-contato {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .topo-do-site .btn-contato button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+
+  .topo-do-site img {
+    width: 160px;
+    max-width: 90vw;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .btn-social {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 16px 0;
+  }
+  html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+}
 .topo-do-site h1 {
-    font-size: 3.5rem;        /* aumenta o título */
+    font-size: 3.5rem;        
     line-height: 1.2;
     max-width: 700px;
-    text-align: center;       /* centraliza */
-    margin: 0 auto 20px auto; /* centraliza com margin auto */
+    text-align: center;       
+    margin: 0 auto 20px auto; 
     font-weight: 700;
 }
 .topo-do-site span {
@@ -134,21 +202,30 @@ section.topo-do-site .flex{
     color: #1808b1;
     font-size: 38px;
 }
+.topo-do-site h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    font-weight: 500;
+}
+
 .topo-do-site p {
-    font-size: 100px;        /* aumenta o texto */
+    font-size: 22px;       
     max-width: 690px;
     text-align: center;
-    margin: 0 auto 40px auto; /* mais espaço abaixo */
+    margin: 0 auto 40px auto;
     line-height: 1.6;
     color: #e0e0e0;
 }
 .topo-do-site .btn-contato {
     display: flex;
-    justify-content: center;  /* centraliza */
+    justify-content: center;  
     width: 100%;
 }
 .topo-do-site .btn-contato button {
-    padding: 14px 42px;       /* botão maior */
+    padding: 14px 42px;      
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 30px;
@@ -228,7 +305,7 @@ section.topo-do-site .flex{
     box-shadow: 0 8px 52px rgb(24, 8, 188);
 }
 
-/* Responsivo para telas menores */
+
 @media (max-width: 900px) {
     .especialidades-box {
         flex-direction: column;
@@ -247,8 +324,6 @@ section.topo-do-site .flex{
     }
 }
 
-
-/* Ajuste para colocar o título e descrição acima dos cards */
 .especialidades .interface > .flex {
     flex-direction: column;
     align-items: center;
@@ -340,7 +415,6 @@ section.topo-do-site .flex{
     border-radius: 4px;
 }
 
-/* Responsivo */
 @media (max-width: 900px) {
     .especialidades-box-carousel {
         flex-direction: row;
@@ -352,26 +426,23 @@ section.topo-do-site .flex{
         padding: 32px 24px;
     }
 }
-/* Container principal da seção */
 section.sobre {
-    padding: 80px 4%; /* Ajustei o padding para um valor mais comum */
+    padding: 80px 4%; 
 }
 
-/* O container flex que organiza a imagem e o texto */
 .sobre .flex {
     display: flex; /* Essencial para o layout lado a lado */
     align-items: center;
-    gap: 60px; /* Controla o espaço entre imagem e texto */
+    gap: 60px; 
 }
 
-/* Container da imagem */
 .sobre .img-sobre {
     flex: 1; /* Faz a coluna da imagem ocupar 1 "parte" do espaço */
 }
 
 .sobre .img-sobre img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do container */
-    max-width: 600px; /* Limita o tamanho máximo da imagem */
+    width: 100%; 
+    max-width: 600px; 
     height: auto;
     border-radius: 30%;
     box-shadow: 0px 0px 60px rgb(24, 8, 188);
@@ -379,25 +450,19 @@ section.sobre {
     display: block;
     animation: flutuar 3s ease-in-out infinite;
     padding: auto;
-
 }
 
-/* Container do texto */
 .sobre .txt-sobre {
-    flex: 2; /* Faz o texto ocupar 2 "partes" do espaço (o dobro da imagem) */
+    flex: 2; 
     color: #fff;
-    gap: 20px; /* Espaço entre elementos de texto */
+    gap: 20px;
 }
 
 .sobre .txt-sobre h2 {
     font-size: 58px;
     line-height: 1.2;
     margin-bottom: 22px;
-    
-  
 }
-
-
 
 .sobre .txt-sobre p {
     font-size: 18px;
@@ -405,12 +470,11 @@ section.sobre {
     font-family: Arial, sans-serif;
     margin-bottom: 20px;
     text-align: justify;
-    width: 100%;           /* Faz o texto ocupar toda a largura possível */
-    max-width: 800px;       /* Remove limite de largura */
+    width: 100%;         
+    max-width: 800px;       
     box-sizing: border-box;
 }
 
-/* Responsivo para telas menores */
 @media (max-width: 900px) {
     .sobre .flex {
         flex-direction: column; /* Coloca a imagem em cima do texto */
@@ -422,7 +486,7 @@ section.sobre {
     }
 
     .sobre .txt-sobre h2 {
-        font-size: 40px; /* Diminui o título para caber melhor */
+        font-size: 40px; 
         line-height: 40px;
     }
     @media (max-width: 900px) {
@@ -498,10 +562,10 @@ section.projetos .flex{
 }
 
 .img-port {
-    width: 60vw;           /* Menor que antes */
-    max-width: 700px;      /* Limite para telas grandes */
-    height: 30vw;          /* Proporção menor */
-    max-height: 350px;     /* Limite para telas grandes */
+    width: 60vw;           
+    max-width: 700px;      
+    height: 30vw;          
+    max-height: 350px;     
     position: relative;
     overflow: hidden;
     border-radius: 24px;
@@ -533,30 +597,6 @@ section.projetos .flex{
     transform: scale(1);
 }
 
-
-
-
-/* Tamanho menor e responsivo para o h1 do topo */
-.topo-do-site h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    max-width: 90vw;
-    text-align: center;
-    margin: 0 auto 20px auto;
-    font-weight: 500;
-}
-
-/* Parágrafo do topo também menor */
-.topo-do-site p {
-    font-size: 1.1rem;
-    max-width: 90vw;
-    text-align: center;
-    margin: 0 auto 32px auto;
-    line-height: 1.5;
-}
-
-
-
 .img-port .img-gif {
     opacity: 0.3;   /* Sempre visível, mas opaco */
     z-index: 2;
@@ -566,27 +606,6 @@ section.projetos .flex{
     /* Aumenta o GIF em 1% para esconder a borda da gravação */
     transform: scale(1.10);
 }
-
-
-/* Tamanho menor e responsivo para o h1 do topo */
-.topo-do-site h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    max-width: 90vw;
-    text-align: center;
-    margin: 0 auto 20px auto;
-    font-weight: 500;
-}
-
-/* Parágrafo do topo também menor */
-.topo-do-site p {
-    font-size: 1.1rem;
-    max-width: 90vw;
-    text-align: center;
-    margin: 0 auto 32px auto;
-    line-height: 1.5;
-}
-
 
 .img-port:hover .img-gif {
     opacity: 1;     /* Fica totalmente visível no hover */
@@ -609,7 +628,6 @@ section.projetos .flex{
     filter: none; /* Sempre limpo */
     pointer-events: none;
 }
-
 
 .img-port:hover .img-gif {
     opacity: 1;
@@ -636,26 +654,6 @@ section.projetos .flex{
     
 }
 
-/* Tamanho menor e responsivo para o h1 do topo */
-.topo-do-site h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    max-width: 90vw;
-    text-align: center;
-    margin: 0 auto 20px auto;
-    font-weight: 500;
-}
-
-/* Parágrafo do topo também menor */
-.topo-do-site p {
-    font-size: 1.1rem;
-    max-width: 90vw;
-    text-align: center;
-    margin: 0 auto 32px auto;
-    line-height: 1.5;
-}
-
-
 /* Curva no topo do footer */
 footer {
     background-color: #000000;
@@ -675,8 +673,7 @@ footer::before {
     width: 100%;
     height: 50px; /* Altura da curva */
     background-color: #121214; /* Cor do fundo do body */
-    /* Curva invertida usando clip-path */
-    clip-path: ellipse(50% 90% at 50% 0%);
+    clip-path: ellipse(50% 90% at 50% 0%);/* Curva invertida usando clip-path */
     z-index: 1;
     pointer-events: none;
 }
@@ -700,7 +697,7 @@ footer .logo-footer {
 }
 
 footer .logo-footer img {
-    height: 110px; /* Logo maior, mas não exagerado */
+    height: 110px; 
     width: auto;
     display: block;
 }
@@ -720,7 +717,7 @@ footer .footer-email {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 500px;   /* tamanho do botão */
+  width: 500px;   
   height: 60px;
   border-radius: 50%;
   background-color: blue;
@@ -729,10 +726,9 @@ footer .footer-email {
 }
 
 #social-footer a svg, 
-#social-footer a i { /* se forem ícones em <i> ou svg */
+#social-footer a i { 
   font-size: 29px;
 }
-
 
 @media (max-width: 900px) {
     footer .line-footer {
@@ -755,99 +751,3 @@ footer .footer-email {
     }
 }
 
-
-/* Tamanho menor e responsivo para o h1 do topo */
-.topo-do-site h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    max-width: 90vw;
-    text-align: center;
-    margin: 0 auto 20px auto;
-    font-weight: 500;
-}
-
-/* Parágrafo do topo também menor */
-.topo-do-site p {
-    font-size: 1.1rem;
-    max-width: 90vw;
-    text-align: center;
-    margin: 0 auto 32px auto;
-    line-height: 1.5;
-}
-
-@media (max-width: 900px) {
-  section.topo-do-site .flex {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .topo-do-site h1 {
-    font-size: 1.8rem;
-    max-width: 90vw;
-    text-align: center;
-  }
-
-  .topo-do-site p {
-    font-size: 1rem;
-    max-width: 90vw;
-    text-align: center;
-  }
-
-  .topo-do-site .btn-contato {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .topo-do-site .btn-contato button {
-    padding: 10px 30px;
-    font-size: 1rem;
-  }
-
-  .topo-do-site img {
-    width: 160px;
-    max-width: 90vw;
-    height: auto;
-    margin-top: 20px;
-  }
-
-  .btn-social {
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    padding: 16px 0;
-  }
-  html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-}
-@media (max-width: 900px) {
-  header nav,
-  header nav ul,
-  header nav ul li {
-    display: none !important;
-  }
-
-  header .logo {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  header > .interface {
-    justify-content: center;
-    align-items: center;
-  }
-}
-html {
-  scroll-behavior: smooth;
-}
