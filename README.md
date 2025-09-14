@@ -5,7 +5,7 @@
 Bem-vindo ao meu portfólio!  
 Este projeto foi desenvolvido para apresentar minhas habilidades, especialidades e projetos como **desenvolvedor web**.  
 
-🔗 **Acesse online**: (em breve com link do Vercel)
+🔗 **Acesse online**: https://portifolio-two-opal.vercel.app/
 
 ---
 
