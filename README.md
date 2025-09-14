@@ -5,7 +5,7 @@
 Bem-vindo ao meu portfólio!  
 Este projeto foi desenvolvido para apresentar minhas habilidades, especialidades e projetos como **desenvolvedor web**.  
 
-🔗 **Acesse online**: https://portifolio-two-opal.vercel.app/
+🔗 **Acesse online**: https://portifolio-git-main-gabrielcostarib1998-4707s-projects.vercel.app/
 
 ---
 
