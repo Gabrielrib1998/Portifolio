@@ -1,0 +1,825 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  /* Define a família da fonte */
+  font-family: 'Bitcount Grid Double', system-ui;
+
+  /* Define o peso da fonte (opcional, pode ser de 100 a 900) */
+  font-weight: 400; /* Você pode ajustar este valor */
+
+  /* Aplica as configurações exatas da fonte variável da imagem */
+  font-variation-settings: 
+    "slnt" 0,
+    "CRSV" 8.5, /* Este é o eixo "Cursive" que você ajustou */
+    "ELSH" 0,
+    "ELXP" 0;
+}
+body{
+    background-color: #121214;
+    height: 100vh;
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+.flex{
+    display: flex;
+    
+}
+/* Garanta que este código substitua o antigo */
+
+header {
+  padding: 40px 4%;
+  background-color: #000000;
+  position: relative; /* Mantém a referência para a curva */
+  padding-bottom: 80px; 
+
+  /* IMPORTANTE: REMOVA a linha 'overflow: hidden;' se ela estiver aqui */
+  /* Ela estava cortando a curva que tentamos criar. */
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90px; /* A altura da sua curva */
+  background-color: #121214; /* Cor de fundo do body */
+  
+  /* A mágica da curva usando clip-path */
+  clip-path: ellipse(50% 90% at 50% 100%);
+}
+header > .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo img{
+    width: 120px;
+    height: auto;
+}
+header a{
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header a:hover{
+    color: #ffff;
+    transform: scale(1.05);
+}
+header nav ul{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-size: 20px;
+}
+header nav ul li {
+   display: inline-block;
+   padding: 0px 40px;
+
+}
+header .btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color:#1808b1;
+    border: 0;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+header .btn-contato button:hover {
+    box-shadow:0px 0px 8px  #1808b1;
+    background-color: #1808b1;
+    transform: scale(1.05);
+}
+section.topo-do-site {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 4% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+.topo-do-site h1 {
+    font-size: 3.5rem;        /* aumenta o título */
+    line-height: 1.2;
+    max-width: 700px;
+    text-align: center;       /* centraliza */
+    margin: 0 auto 20px auto; /* centraliza com margin auto */
+    font-weight: 700;
+}
+.topo-do-site span {
+    color: #1808b1;
+}
+.ponto-final{
+    color: #1808b1;
+    font-size: 38px;
+}
+.topo-do-site p {
+    font-size: 100px;        /* aumenta o texto */
+    max-width: 690px;
+    text-align: center;
+    margin: 0 auto 40px auto; /* mais espaço abaixo */
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+.topo-do-site .btn-contato {
+    display: flex;
+    justify-content: center;  /* centraliza */
+    width: 100%;
+}
+.topo-do-site .btn-contato button {
+    padding: 14px 42px;       /* botão maior */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    background-color: #1808b1;
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.topo-do-site .btn-contato button:hover {
+    background-color: #0f0578;
+    transform: scale(1.08);
+    box-shadow: 0px 0px 14px #1808b1;
+}
+.topo-do-site img{
+    width: 500px;
+    height: auto;
+    border-radius: 800px;
+    box-shadow: 0px 0px 100px rgba(18, 23, 203, 0.5);
+}
+.topo-do-site .img-topo-site img {
+    animation: flutuar 3s ease-in-out infinite;
+    position: relative;
+}
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.especialidades-box {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch; /* Faz os cards terem a mesma altura */
+    margin-top: 40px;
+}
+
+.especialidades-box .card {
+    background: #000000;
+    border-radius: 24px;
+    box-shadow: 0 4px 34px rgb(23, 2, 212);
+    padding: 32px 24px;
+    flex: 1 1 220px; /* Cresce igualmente, largura mínima */
+    min-width: 220px;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.especialidades-box .card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+}
+
+.especialidades-box .card h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.especialidades-box .card p {
+    color: #ccc;
+    font-size: 16px;
+    text-align: center;
+}
+
+.especialidades-box .card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 52px rgb(24, 8, 188);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 900px) {
+    .especialidades-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .especialidades-box .card {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+/* Ajuste para colocar o título e descrição acima dos cards */
+.especialidades .interface > .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.txt-especialidades {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.txt-especialidades h2 {
+    font-size: 58px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.txt-especialidades span {
+    color: #1808b1;
+}
+
+.txt-especialidades p {
+    color: #ccc;
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Aumenta o tamanho dos cards */
+.especialidades-box .card {
+   
+    padding: 60px 58px;
+}
+
+.especialidades-box-carousel {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+    margin-top: 40px;
+}
+
+.especialidades-box-carousel .card {
+    min-width: 320px;
+    max-width: 340px;
+    flex: 0 0 auto;
+    background: #000000;
+    border-radius: 24px;
+    box-shadow: 0 0px 34px rgb(23, 2, 212);
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: start;
+    transition: transform 0.2s;
+}
+
+.especialidades-box-carousel .card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+}
+
+.especialidades-box-carousel .card h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.especialidades-box-carousel .card p {
+    color: #ccc;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+.especialidades-box-carousel .card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 52px rgb(24, 8, 188);
+}
+
+/* Scrollbar estilizada (opcional) */
+.especialidades-box-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+.especialidades-box-carousel::-webkit-scrollbar-thumb {
+    background: #1808b1;
+    border-radius: 4px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .especialidades-box-carousel {
+        flex-direction: row;
+        align-items: center;
+    }
+    .especialidades-box-carousel .card {
+        min-width: 80vw;
+        max-width: 90vw;
+        padding: 32px 24px;
+    }
+}
+/* Container principal da seção */
+section.sobre {
+    padding: 80px 4%; /* Ajustei o padding para um valor mais comum */
+}
+
+/* O container flex que organiza a imagem e o texto */
+.sobre .flex {
+    display: flex; /* Essencial para o layout lado a lado */
+    align-items: center;
+    gap: 60px; /* Controla o espaço entre imagem e texto */
+}
+
+/* Container da imagem */
+.sobre .img-sobre {
+    flex: 1; /* Faz a coluna da imagem ocupar 1 "parte" do espaço */
+}
+
+.sobre .img-sobre img {
+    width: 600px;
+    height: auto;
+    border-radius: 30%;
+    box-shadow: 0px 0px 60px rgb(24, 8, 188);
+    margin-right: 22px;
+    display: block;
+    transform: translate(-150px, 0); /* Move a imagem para a esquerda */
+    animation: flutuar 3s ease-in-out infinite;
+    padding: auto;
+
+}
+
+/* Container do texto */
+.sobre .txt-sobre {
+    flex: 2; /* Faz o texto ocupar 2 "partes" do espaço (o dobro da imagem) */
+    color: #fff;
+    gap: 20px; /* Espaço entre elementos de texto */
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 58px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+    
+  
+}
+
+
+
+.sobre .txt-sobre p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    text-align: justify;
+    width: 800px;           /* Faz o texto ocupar toda a largura possível */
+    max-width: none;       /* Remove limite de largura */
+    box-sizing: border-box;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 900px) {
+    .sobre .flex {
+        flex-direction: column; /* Coloca a imagem em cima do texto */
+        text-align: center; /* Centraliza o texto no mobile */
+    }
+
+    .sobre .img-sobre {
+        margin-bottom: 30px; /* Espaço entre a imagem e o texto */
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 40px; /* Diminui o título para caber melhor */
+        line-height: 40px;
+    }
+    @media (max-width: 900px) {
+  .sobre {
+    padding: 40px 4%;
+    overflow-x: hidden;
+  }
+
+  .sobre .img-sobre img {
+    width: 240px;
+    transform: none; /* Remove o translate que empurra para fora */
+    margin: 0 auto;
+    display: block;
+  }
+
+  .sobre .txt-sobre {
+    padding: 0 16px;
+  }
+
+  .sobre .txt-sobre h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .sobre .txt-sobre p {
+    width: 100%;
+    font-size: 16px;
+    padding: 0 12px;
+    text-align: center;
+  }
+}
+
+}
+.sobre .txt-sobre h2 span {
+    color: #1808b1;
+    display: block;
+}
+
+.btn-social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: background 0.3s;
+  }
+    .btn-social a:hover {
+        background-color: #1808b1;
+        box-shadow: 0px 0px 8px #1808b1;
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+    }
+section.projetos {
+    padding: 80px 4%;
+}
+section.projetos .flex{
+    justify-content: space-around;
+}
+
+.img-port {
+    width: 60vw;           /* Menor que antes */
+    max-width: 700px;      /* Limite para telas grandes */
+    height: 30vw;          /* Proporção menor */
+    max-height: 350px;     /* Limite para telas grandes */
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 0 34px rgb(23, 2, 212);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+
+.img-port img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+    transition: opacity 0.4s, filter 0.4s;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.img-port .img-static {
+    opacity: 1;
+    z-index: 1;
+    filter: none; /* Sempre limpa */
+    transform: scale(1);
+}
+
+
+
+
+/* Tamanho menor e responsivo para o h1 do topo */
+.topo-do-site h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    font-weight: 500;
+}
+
+/* Parágrafo do topo também menor */
+.topo-do-site p {
+    font-size: 1.1rem;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 32px auto;
+    line-height: 1.5;
+}
+
+
+
+.img-port .img-gif {
+    opacity: 0.3;   /* Sempre visível, mas opaco */
+    z-index: 2;
+    filter: none;
+    transition: opacity 0.4s;
+    cursor: pointer;
+    /* Aumenta o GIF em 1% para esconder a borda da gravação */
+    transform: scale(1.10);
+}
+
+
+/* Tamanho menor e responsivo para o h1 do topo */
+.topo-do-site h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    font-weight: 500;
+}
+
+/* Parágrafo do topo também menor */
+.topo-do-site p {
+    font-size: 1.1rem;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 32px auto;
+    line-height: 1.5;
+}
+
+
+.img-port:hover .img-gif {
+    opacity: 1;     /* Fica totalmente visível no hover */
+}
+
+.img-port:hover .img-gif {
+    opacity: 1;
+}
+
+.img-port .overlay-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 16px #000, 0 0px 40px #1808b1;
+    z-index: 3;
+    filter: none; /* Sempre limpo */
+    pointer-events: none;
+}
+
+
+.img-port:hover .img-gif {
+    opacity: 1;
+}
+
+.img-port:hover .img-static {
+    opacity: 0;
+}
+
+.img-port:hover .overlay-text {
+    filter: blur(0);
+}
+
+.titulo {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 78px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+.titulo span {
+    color: #1808b1;
+    
+}
+
+/* Tamanho menor e responsivo para o h1 do topo */
+.topo-do-site h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    font-weight: 500;
+}
+
+/* Parágrafo do topo também menor */
+.topo-do-site p {
+    font-size: 1.1rem;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 32px auto;
+    line-height: 1.5;
+}
+
+
+/* Curva no topo do footer */
+footer {
+    background-color: #000000;
+    padding: 40px 0 20px 0;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 40px;    position: relative; /* Para posicionar o ::before */
+    position: relative; /* Para posicionar o ::before */
+    overflow: visible;  /* Garante que a curva apareça */
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px; /* Altura da curva */
+    background-color: #121214; /* Cor do fundo do body */
+    /* Curva invertida usando clip-path */
+    clip-path: ellipse(50% 90% at 50% 0%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+footer .line-footer {
+    display: grid;
+    grid-template-columns: minmax(200px, 220px) 1fr minmax(200px, 220px);
+    align-items: center;
+    border-bottom: 1px solid #222;
+    padding-bottom: 34px;
+    margin-bottom: 36px;
+    padding-left: 4%;
+    padding-right: 8%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .logo-footer {
+    justify-self: start;
+}
+
+footer .logo-footer img {
+    height: 110px; /* Logo maior, mas não exagerado */
+    width: auto;
+    display: block;
+}
+
+footer .footer-email {
+    justify-self: center;
+    text-align: center;
+    color: #ccc;
+    font-size: 1.3rem;
+    font-family: inherit;
+    letter-spacing: 1px;
+    margin: 0;
+    word-break: break-all;
+}
+
+footer .btn-social {
+    justify-self: end;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    footer .line-footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 16px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    footer .logo-footer,
+    footer .footer-email,
+    footer .btn-social {
+        justify-self: center;
+    }
+    footer .logo-footer img {
+        height: 70px;
+    }
+}
+
+
+/* Tamanho menor e responsivo para o h1 do topo */
+.topo-do-site h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    font-weight: 500;
+}
+
+/* Parágrafo do topo também menor */
+.topo-do-site p {
+    font-size: 1.1rem;
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto 32px auto;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  section.topo-do-site .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .topo-do-site h1 {
+    font-size: 1.8rem;
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  .topo-do-site p {
+    font-size: 1rem;
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  .topo-do-site .btn-contato {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .topo-do-site .btn-contato button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+
+  .topo-do-site img {
+    width: 160px;
+    max-width: 90vw;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .btn-social {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 16px 0;
+  }
+  html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+}
+@media (max-width: 900px) {
+  header nav,
+  header nav ul,
+  header nav ul li {
+    display: none !important;
+  }
+
+  header .logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  header > .interface {
+    justify-content: center;
+    align-items: center;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
