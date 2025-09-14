@@ -739,15 +739,51 @@ footer .footer-email {
         padding-right: 0;
         text-align: center;
     }
+
     footer .logo-footer,
     footer .footer-email,
     footer .btn-social {
         justify-self: center;
-        
+        text-align: center;
+        margin-bottom: 16px;
+        /* ❌ Tira esse border-radius daqui */
     }
+
     footer .logo-footer img {
         height: 70px;
         transform: translateY(15px);
     }
-}
 
+    /* ✅ Deixa os botões circulares aqui */
+    footer .btn-social {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    footer .btn-social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: blue;
+        border-radius: 50%; /* só aqui */
+        font-size: 22px;
+        color: #fff;
+        text-decoration: none;
+    }
+    @media (max-width: 900px) {
+  #social-footer a {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: blue;
+    font-size: 22px;
+    margin: 0 8px;
+  }
+}
+}
