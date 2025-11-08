@@ -25,7 +25,9 @@
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#projetos">Projetos</a></li>
-                    
+                    <li><a href="#certificados">Certificados & Cursos</a></li>
+                    <li><a href="#livros">Livros</a></li>
+                   
                 </ul>
             </nav>
             <div class="btn-contato">
@@ -65,17 +67,18 @@
             </div>
         </section>
         
-       <section id="sobre" class="sobre reveal">
-        <div class="interface">
+                <section id="sobre" class="sobre reveal">
+                    <div class="interface">
             <div class="flex">
                 <div class="img-sobre">
                     <img src="./assets/img/sobre.jpg" alt="Imagem sobre mim">
                 </div>
                 <div class="txt-sobre">
                     <h2>Muito prazer, <span>Sou Gabriel Ribeiro.</span></h2>
-                    <p>Olá! Meu nome é Gabriel Ribeiro, tenho 27 anos e sou um desenvolvedor web apaixonado por transformar ideias em experiências digitais incríveis. Desde jovem, a tecnologia e seu poder de conectar pessoas me fascinam, uma paixão que me levou diretamente para o universo do desenvolvimento web.
 
-Com domínio em HTML, CSS, JavaScript e React, construo sites e aplicações modernas, responsivas e visualmente impactantes. Sou movido por desafios técnicos e pela busca de soluções criativas para problemas complexos, sempre acreditando que a chave para um projeto de sucesso está na sinergia entre um design intuitivo e uma funcionalidade eficiente.</p>
+                    <p>Olá! Meu nome é Gabriel Ribeiro, tenho 27 anos e sou um desenvolvedor Full-stack apaixonado por transformar ideias em experiências digitais incríveis. Desde jovem, a tecnologia e seu poder de conectar pessoas me fascinam, uma paixão que me levou diretamente para o universo do desenvolvimento web.
+
+Com domínio em HTML, CSS, JavaScript e React, construo sites e aplicações modernas, responsivas e visualmente impactantes. Também faço programação mobile usando React Native, criando aplicativos nativos para iOS e Android. Sou movido por desafios técnicos e pela busca de soluções criativas para problemas complexos, sempre acreditando que a chave para um projeto de sucesso está na sinergia entre um design intuitivo e uma funcionalidade eficiente.</p>
 
                     <p>Além das habilidades técnicas, valorizo profundamente a comunicação e o trabalho em equipe. Acredito que a colaboração é o motor para o sucesso, e por isso, estou sempre aberto a aprender com os outros e a compartilhar meu conhecimento.
 
@@ -83,14 +86,18 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
 
                     <p>Se você procura um desenvolvedor dedicado, criativo e comprometido com a excelência, vamos conversar. Estou pronto para colaborar e transformar sua visão em uma realidade digital de sucesso!</p>
                     <div class="btn-social">
-                    <a href="https://www.linkedin.com/in/gabriel-ribeiro-542161376/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/gabriel-ribeiro-542161376/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://github.com/GabrielRib1998" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/GabrielRib1998" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="bi bi-github"></i>
                     </a>
-                    <a href="https://www.instagram.com/gabrielribeiro_199_/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/gabrielribeiro_199_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="bi bi-instagram"></i>
+                    </a>
+                    <a class="btn-download-cv" href="./assets/img/Curriculo%20Gabriel%20Ribeiro.pdf" download="Curriculo Gabriel Ribeiro.pdf" aria-label="baixe meu curriculo" title="baixe meu curriculo">
+                        <i class="bi bi-download"></i>
+                        <span class="btn-download-text">baixe<br>meu<br>curriculo</span>
                     </a>
                     </div>
             </div>
@@ -104,58 +111,186 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
                     <h2>Minhas <span>Especialidades</span>.</h2>
                     <p>Com habilidades em HTML, CSS, JavaScript e React, crio sites modernos e responsivos que encantam os usuários.</p>
                 </div>
-                <div class="especialidades-box">
-                    <div class="card">
-                        <img src="./assets/img/html.png" alt="Logo HTML">
-                        <h3>HTML5</h3>
-                        <p>Estruturação de conteúdo web com HTML5, garantindo acessibilidade e semântica adequada.</p>
-                    </div>
-                    <div class="card">
-                        <img src="./assets/img/css.png" alt="Logo CSS">
-                        <h3>CSS3</h3>
-                        <p>Estilização avançada com CSS3, criando layouts responsivos e visualmente atraentes.</p>
-                    </div>
-                    <div class="card">
-                        <img src="./assets/img/js.png" alt="Logo JavaScript">
-                        <h3>JavaScript</h3>
-                        <p>Desenvolvimento de interatividade e funcionalidades dinâmicas utilizando JavaScript.</p>
-                    </div>
-                    <div class="card">
-                        <img src="./assets/img/PHP.png" alt="Logo PHP">
-                        <h3>PHP</h3>
-                        <p>Criação de interfaces de usuário modernas e eficientes com a biblioteca PHP.</p>
+                <div class="especialidades-box-carousel">
+                    <div class="especialidades-track">
+                        <div class="card">
+                            <img src="./assets/img/html.png" alt="Logo HTML">
+                            <h3>HTML5</h3>
+                            <p>Estruturação de conteúdo web com HTML5, garantindo acessibilidade e semântica adequada.</p>
                         </div>
                         <div class="card">
-                        <img src="./assets/img/wordpress.png" alt="Logo WordPress">
-                        <h3>WordPress</h3>
-                        <p>Desenvolvimento de sites dinâmicos e blogs profissionais utilizando WordPress.</p>
-                    </div>
-                    <div class="card">
-                        <img src="./assets/img/react.png" alt="Logo React">
-                        <h3>React</h3>
-                        <p>Criação de interfaces modernas e reativas com a biblioteca React.</p>
+                            <img src="./assets/img/css.png" alt="Logo CSS">
+                            <h3>CSS3</h3>
+                            <p>Estilização avançada com CSS3, criando layouts responsivos e visualmente atraentes.</p>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/js.png" alt="Logo JavaScript">
+                            <h3>JavaScript</h3>
+                            <p>Desenvolvimento de interatividade e funcionalidades dinâmicas utilizando JavaScript.</p>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/PHP.png" alt="Logo PHP">
+                            <h3>PHP</h3>
+                            <p>Criação de interfaces de usuário modernas e eficientes com a biblioteca PHP.</p>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/wordpress.png" alt="Logo WordPress">
+                            <h3>WordPress</h3>
+                            <p>Desenvolvimento de sites dinâmicos e blogs profissionais utilizando WordPress.</p>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/react.png" alt="Logo React">
+                            <h3>React</h3>
+                            <p>Criação de interfaces modernas e reativas com a biblioteca React.</p>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/ReactNative.png" alt="React Native">
+                            <h3>React Native</h3>
+                            <p>Desenvolvimento mobile com React Native, criando apps nativos para iOS e Android.</p>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/python.png" alt="Python">
+                            <h3>Python</h3>
+                            <p>Desenvolvimento com Python para automação, scripts, back-end e ciência de dados.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-       </section>
-
-        
-
+    </section>
+    
+    
+    
     <section id="projetos" class="projetos reveal">
-          <div class="interface">
+        <div class="interface">
             <h2 class="titulo">Meus <span>Projetos.</span></h2>
-                <div class="flex">
-                 <!-- Exemplo de uso na sua galeria/projetos -->
-                    <div class="img-port">
-                        <img class="img-static" src="./assets/img/poster.png" alt="Projeto Nex">
-                        <img class="img-gif" src="./assets/img/nex.gif" alt="Projeto Nex GIF">
-                        
+            <div class="projects-grid">
+                <div class="project-card">
+                                <div id="book-modal" class="modal book-modal" role="dialog" aria-modal="true" aria-hidden="true">
+                                    <div class="modal-content" role="document">
+                                        <div class="modal-left">
+                                            <img id="book-modal-img" src="" alt="Capa do livro">
+                                        </div>
+                                        <div class="modal-right">
+                                            <button class="modal-close" id="book-modal-close" aria-label="Fechar">✕</button>
+                                            <h3 id="book-modal-title">Título</h3>
+                                            <p id="book-modal-author" class="meta">Autor: —</p>
+                                            <h4>O que aprendi</h4>
+                                            <p id="book-modal-learn">—</p>
+                                            <h4>Por que recomendo</h4>
+                                            <p id="book-modal-recommend">—</p>
+                                        </div>
+                                    </div>
+                                </div>
+                    <img src="./assets/img/Nex.png" alt="Nex E-commerce">
+                    <div class="card-body">
+                        <h3>Nex E‑commerce</h3>
+                        <p>E‑commerce completo feito em PHP com painel administrativo, carrinho e integração de pagamentos.</p>
+                        <div>
+                            <button class="btn-detalhes" data-project="nex">Ver detalhes</button>
+                            <a class="btn-github" href="https://github.com/Gabrielrib1998/ProjetoNex" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i>
+                                Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="./assets/img/Codeall.jpg" alt="CodeAll App" onerror="this.src='./assets/img/poster.png'">
+                    <div class="card-body">
+                        <h3>CodeAll — App de Ensino</h3>
+                        <p>App de ensino para programadores com aulas, quizzes e acompanhamento de progresso (desenvolvido em React Native).</p>
+                        <div>
+                            <button class="btn-detalhes" data-project="codeall">Ver detalhes</button>
+                            <a class="btn-github" href="https://github.com/Gabrielrib1998/AppCodeAll" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i>
+                                Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </section>
+
+          <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+              <div class="modal-content" role="document">
+                  <div class="modal-left">
+                      <img id="modal-img" src="" alt="Imagem do projeto">
+                  </div>
+                  <div class="modal-right">
+                      <button class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+                      <h3 id="modal-title">Título do projeto</h3>
+                      <p id="modal-desc">Descrição do projeto</p>
+                      <h4>Detalhes técnicos</h4>
+                      <ul id="modal-tech"></ul>
+                  </div>
+              </div>
+          </div>
+
+                <section id="certificados" class="certificados reveal">
+                    <div class="interface">
+                        <h2 class="titulo">Certificados & Cursos</h2>
+                        <div class="cert-carousel">
+                            <div class="cert-track" id="cert-track">
+                                <div class="cert-card">
+                                    <img src="./assets/img/CertificadoIA.png" alt="Certificado ENIAC" onerror="this.src='./assets/img/poster.png'">
+                                    <div class="cert-info">
+                                        <h3>Capacitação em Inteligência Artificial (CPTIA)</h3>
+                                        <div class="meta">Carga horária: 30h • Instituição: ENIAC</div>
+                                        <p>Certificado emitido pelo Centro Universitário ENIAC, com conclusão e reconhecimento. Conteúdo aborda fundamentos de IA e aplicações práticas.</p>
+                                    </div>
+                                </div>
+
+                                <div class="cert-card">
+                                    <img src="./assets/img/CertificadoInformatica.png" alt="Curso de Informática" onerror="this.src='./assets/img/poster.png'">
+                                    <div class="cert-info">
+                                        <h3>Informática com pacote Office</h3>
+                                        <div class="meta">Duração: 50h • Instituição: CEU Bonsucesso</div>
+                                        <p>Série de cursos completos cobrindo Informática básica ao avançado: sintaxe, estruturas, orientação a objetos, e aplicações práticas.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cert-controls">
+                                <button id="cert-prev" aria-label="Anterior">‹</button>
+                                <button id="cert-next" aria-label="Próximo">›</button>
+                            </div>
                         </div>
 
-            </div>
-            </div>
-        </section>
+                        <div style="display:flex;align-items:center;justify-content:center;margin-top:12px">
+                            <div class="cert-dots" id="cert-dots"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="livros" class="livros reveal">
+                    <div class="interface">
+                        <h2 class="titulo">Livros que me <span>Acompanham</span></h2>
+                        <p style="text-align:center;color:#9fa7b2;max-width:900px;margin:0 auto 28px;">A leitura é uma jornada contínua. Explore alguns dos livros que me inspiraram e contribuíram para o meu aprendizado.</p>
+
+                        <div class="books-grid">
+                            <div class="book-card">
+                                <img src="./assets/img/Entendoalgoritimos.jpeg" alt="Entendendo Algoritmos" onerror="this.src='./assets/img/poster.png'">
+                                <h3>Entendendo Algoritmos</h3>
+                                <a class="book-action" href="#" data-book="entendendo">Ver Detalhes →</a>
+                            </div>
+
+                            <div class="book-card">
+                                <img src="./assets/img/LogicadeProgramação.jpeg" alt="Lógica de Programação e Algoritmos com JavaScript" onerror="this.src='./assets/img/poster.png'">
+                                <h3>Lógica de Programação e Algoritmos com JavaScript</h3>
+                                <a class="book-action" href="#" data-book="logica-js">Ver Detalhes →</a>
+                            </div>
+
+                            <div class="book-card">
+                                <img src="./assets/img/GuiadoPython.jpg" alt="Guia do Python para Data Science" onerror="this.src='./assets/img/poster.png'">
+                                <h3>Guia do Python para Data Science</h3>
+                                <a class="book-action" href="#" data-book="guia-python">Ver Detalhes →</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 
     </main>
@@ -166,7 +301,7 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
         <img src="./assets/img/logo_rib.png" alt="Logo">
       </div>
       <div class="footer-email">
-        <p><i class="bi bi-envelope"></i> <a href="mailto:Gabriel.costarib@gmail.com">Gabriel.costarib@gmail.com</a></p>
+        <p><i class="bi bi-envelope"></i> <a href="mailto:Gabriel.costarib@gmail.com">Gabriel.costarib1998@gmail.com</a></p>
       </div>
       
       <div class="btn-social" id="social-footer">
@@ -184,17 +319,9 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
   </div>
 </footer>
     <script>
-        /*
-         Script de digitação em português:
-         - digita o título principal uma vez (destaque em "portfólio")
-         - logo abaixo, em `#typed-sub`, fica um loop contínuo que digita e apaga
-         - respeita a preferência do usuário por reduzir movimento
-        */
         (function(){
-            // --- configurações (ajuste se quiser) ---
-            const titulo = 'Bem-vindo ao meu portfólio'; // texto do título
+            const titulo = 'Bem-vindo ao meu portfólio';
 
-            // Frases em português para o loop secundário (você pode editar ou adicionar)
             const frases = [
                 'transformando ideias',
                 'soluções inteligentes',
@@ -207,19 +334,16 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
             const typedSub = document.getElementById('typed-sub');
             const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            // Função para envolver a palavra "portfólio" com a classe de destaque
             function destacarPortifolio(texto){
                 return texto.replace(/(port[fíi]lio|portfólio)/i, '<span class="typed-accent">$&</span>');
             }
 
-            // Se for preferencia por menos movimento, apenas mostra os textos sem animação
             if (prefersReduced) {
                 if (typedMain) typedMain.innerHTML = destacarPortifolio(titulo);
                 if (typedSub) typedSub.textContent = frases[0];
                 return;
             }
 
-            // --- Digitar o título principal (apenas uma vez) ---
             function typeOnce(element, text, speed = 70, callback){
                 if (!element) { if (callback) callback(); return; }
                 let i = 0;
@@ -229,7 +353,6 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
                         i++;
                         setTimeout(step, speed);
                     } else {
-                        // quando terminar, aplica destaque na palavra portfólio
                         element.innerHTML = destacarPortifolio(text);
                         if (callback) callback();
                     }
@@ -237,7 +360,6 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
                 step();
             }
 
-            // --- Loop de digitar e apagar para várias frases ---
             function loopTyping(element, listaFrases, opts){
                 if (!element) return;
                 const speedType = opts.speedType || 60;
@@ -273,7 +395,6 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
                     back();
                 }
 
-                // fluxo: digita -> pausa -> apaga -> próxima frase (loop infinito)
                 function next(){
                     const frase = listaFrases[fraseIndex % listaFrases.length];
                     typePhrase(frase, () => {
@@ -287,17 +408,12 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
                 next();
             }
 
-            // Executa: primeiro digita o título, depois inicia o loop do secundário
             typeOnce(typedMain, titulo, 70, function(){
-                // Quando o título terminar de ser digitado, escondemos o caret do título
-                // para que fique apenas o caret do texto secundário em loop.
                 const caretPrincipal = document.getElementById('caret-main');
                 if (caretPrincipal) {
-                    // Esconde completamente o caret do título
                     caretPrincipal.style.display = 'none';
                 }
 
-                // inicia loop das frases após pequeno atraso
                 setTimeout(function(){
                     loopTyping(typedSub, frases, { speedType: 60, speedDelete: 30, pauseAfter: 1200 });
                 }, 600);
@@ -306,18 +422,142 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
         })();
     </script>
     <script>
-        /*
-         Script em português para aparição suave ao rolar (scroll reveal)
-         - Observa elementos com a classe .reveal
-         - Quando um elemento entra na viewport, adiciona a classe .revealed
-         - Respeita prefers-reduced-motion: caso ativado, revela tudo imediatamente
-        */
+        (function(){
+            const modal = document.getElementById('book-modal');
+            const modalClose = document.getElementById('book-modal-close');
+            const modalImg = document.getElementById('book-modal-img');
+            const modalTitle = document.getElementById('book-modal-title');
+            const modalAuthor = document.getElementById('book-modal-author');
+            const modalLearn = document.getElementById('book-modal-learn');
+            const modalRecommend = document.getElementById('book-modal-recommend');
+
+            const livros = {
+                'entendendo': {
+                    title: 'Entendendo Algoritmos',
+                    img: './assets/img/Entendoalgoritimos.jpeg',
+                    author: 'Aditya Y. Bhargava',
+                    learn: 'Estudo prático dos principais algoritmos usados em programação, como busca binária, quicksort, recursão e algoritmos de grafos. Compreensão de como aplicá‑los de forma eficiente para resolver problemas reais.',
+                    recommend: 'É ideal para quem está começando na programação ou quer entender algoritmos de forma mais intuitiva e sem complicação. Ótimo para reforçar a base lógica e se preparar para entrevistas técnicas ou desafios de código.'
+                },
+                'logica-js': {
+                    title: 'Lógica de Programação e Algoritmos com JavaScript',
+                    img: './assets/img/LogicadeProgramação.jpeg',
+                    author: 'Edécio Fernando Iepsen',
+                    learn: 'Fortalecimento da base lógica em programação por meio de exemplos práticos com JavaScript. Estruturas fundamentais como variáveis, operadores, condicionais, laços de repetição e funções são explicadas de forma clara e didática.',
+                    recommend: 'Excelente leitura para quem está começando e deseja aprender lógica de programação de forma aplicada com JavaScript. O livro ajuda a desenvolver o raciocínio lógico necessário para resolver problemas de forma estruturada.'
+                },
+                'guia-python': {
+                    title: 'Guia do Python para Data Science',
+                    img: './assets/img/GuiadoPython.jpg',
+                    author: 'Jake VanderPlas',
+                    learn: 'O livro explora o uso de Python para a ciência de dados, abordando bibliotecas essenciais como NumPy, Pandas, Matplotlib, Scikit‑Learn e IPython. A obra serve como um guia prático, oferecendo uma visão geral sobre como utilizar essas ferramentas para manipulação, visualização e análise de dados.',
+                    recommend: 'É uma referência valiosa para quem deseja iniciar ou aprofundar os conhecimentos em Data Science com Python. Ele consolida os conceitos fundamentais em um único lugar, facilitando a transição de um programador para um analista de dados, e é reconhecido por sua abordagem clara e completa.'
+                }
+            };
+
+            function openBook(key){
+                const b = livros[key];
+                if (!b) return;
+                modalImg.src = b.img;
+                modalImg.alt = b.title;
+                modalTitle.textContent = b.title;
+                modalAuthor.textContent = 'Autor: ' + (b.author || '—');
+                modalLearn.textContent = b.learn;
+                modalRecommend.textContent = b.recommend;
+
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+            }
+
+            function closeBook(){
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+
+            document.addEventListener('click', function(e){
+                const btn = e.target.closest('.book-action');
+                if (btn){
+                    e.preventDefault();
+                    const key = btn.getAttribute('data-book');
+                    openBook(key);
+                }
+            });
+
+            modalClose.addEventListener('click', closeBook);
+            modal.addEventListener('click', function(e){ if (e.target === modal) closeBook(); });
+            document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeBook(); });
+        })();
+    </script>
+    <script>
+        (function(){
+            const modal = document.getElementById('project-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+            const modalTech = document.getElementById('modal-tech');
+            const modalClose = document.getElementById('modal-close');
+
+            const projetos = {
+                nex: {
+                    title: 'Nex — E‑commerce (PHP)',
+                    img: './assets/img/Nex.png',
+                    desc: 'E‑commerce completo com catálogo, carrinho, checkout e painel administrativo.',
+                    tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
+                    info: 'Projeto de loja online com controle de estoque, sistema de pagamentos e área administrativa para gestão de produtos e pedidos.'
+                },
+                codeall: {
+                    title: 'CodeAll — App de Ensino',
+                    img: './assets/img/Codeall.jpg',
+                    desc: 'App de ensino para programadores com vídeos, quizzes e acompanhamento de progresso.',
+                    tech: ['React Native', 'Firebase', 'Expo'],
+                    info: 'Aplicativo mobile para aprendizagem: aulas estruturadas, quizzes interativos, e sistema de progresso/níveis. Ideal para estudantes e autodidatas.'
+                }
+            };
+
+            function openModal(key){
+                const p = projetos[key];
+                if (!p) return;
+                modalImg.src = p.img;
+                modalImg.alt = p.title;
+                modalTitle.textContent = p.title;
+                modalDesc.textContent = p.info || p.desc;
+                modalTech.innerHTML = '';
+                (p.tech || []).forEach(t => {
+                    const li = document.createElement('li');
+                    li.textContent = t;
+                    modalTech.appendChild(li);
+                });
+
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+            }
+
+            function closeModal(){
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+
+            document.addEventListener('click', function(e){
+                const btn = e.target.closest('.btn-detalhes');
+                if (btn){
+                    const key = btn.getAttribute('data-project');
+                    openModal(key);
+                }
+            });
+
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e){
+                if (e.target === modal) closeModal();
+            });
+            document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+        })();
+    </script>
+    <script>
         (function(){
             const preferenciasReduzidas = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             const elementos = document.querySelectorAll('.reveal');
 
             if (preferenciasReduzidas) {
-                // Se o usuário prefere menos movimento, mostra tudo sem animação
                 elementos.forEach(el => el.classList.add('revealed'));
                 return;
             }
@@ -329,9 +569,126 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
                         obs.unobserve(entrada.target);
                     }
                 });
-            }, { threshold: 0.12 }); // revela quando ~12% do elemento estiver visível
+            }, { threshold: 0.12 }); 
 
             elementos.forEach(el => observer.observe(el));
+        })();
+    </script>
+
+    <script>
+        (function(){
+            const preferenciasReduzidas = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const carousel = document.querySelector('.especialidades-box-carousel');
+            const track = carousel && carousel.querySelector('.especialidades-track');
+            if (!carousel || !track) return;
+
+            if (preferenciasReduzidas) {
+                return;
+            }
+
+            const itens = Array.from(track.children);
+            itens.forEach(item => track.appendChild(item.cloneNode(true)));
+
+            const velocidade = 0.5; 
+            let rafId = null;
+
+            function passo() {
+                carousel.scrollLeft += velocidade;
+                if (carousel.scrollLeft >= (track.scrollWidth / 2)) {
+                    carousel.scrollLeft = 0;
+                }
+                rafId = requestAnimationFrame(passo);
+            }
+
+            carousel.addEventListener('mouseenter', () => { if (rafId) cancelAnimationFrame(rafId); });
+            carousel.addEventListener('mouseleave', () => { rafId = requestAnimationFrame(passo); });
+            carousel.addEventListener('focusin', () => { if (rafId) cancelAnimationFrame(rafId); });
+            carousel.addEventListener('focusout', () => { rafId = requestAnimationFrame(passo); });
+
+            rafId = requestAnimationFrame(passo);
+        })();
+    </script>
+    <script>
+        (function(){
+            const track = document.getElementById('cert-track');
+            const prevBtn = document.getElementById('cert-prev');
+            const nextBtn = document.getElementById('cert-next');
+            const dotsContainer = document.getElementById('cert-dots');
+            const playBtn = document.getElementById('cert-play');
+            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!track || !prevBtn || !nextBtn) return;
+
+            const items = Array.from(track.children);
+            let index = 0;
+            let autoplay = !prefersReduced;
+            let intervalId = null;
+
+            function updateView(){
+                const cardWidth = track.children[0].getBoundingClientRect().width + parseInt(getComputedStyle(track).gap || 20);
+                track.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+                Array.from(dotsContainer.children).forEach((d, i) => d.classList.toggle('active', i === index));
+            }
+
+            items.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.addEventListener('click', () => { index = i; updateView(); resetAutoplay(); });
+                if (i === 0) btn.classList.add('active');
+                dotsContainer.appendChild(btn);
+            });
+
+            prevBtn.addEventListener('click', () => { index = Math.max(0, index - 1); updateView(); resetAutoplay(); });
+            nextBtn.addEventListener('click', () => { index = Math.min(items.length -1, index + 1); updateView(); resetAutoplay(); });
+
+            function stepAutoplay(){
+                index = (index + 1) % items.length;
+                updateView();
+            }
+
+            function startAutoplay(){
+                if (intervalId) clearInterval(intervalId);
+                intervalId = setInterval(stepAutoplay, 3500);
+                playBtn.textContent = 'Pausar Automático';
+                autoplay = true;
+            }
+
+            function stopAutoplay(){
+                if (intervalId) { clearInterval(intervalId); intervalId = null; }
+                playBtn.textContent = 'Iniciar Automático';
+                autoplay = false;
+            }
+
+            function resetAutoplay(){
+                if (prefersReduced) return;
+                stopAutoplay();
+                setTimeout(() => startAutoplay(), 3000);
+            }
+
+            playBtn.addEventListener('click', () => { if (autoplay) stopAutoplay(); else startAutoplay(); });
+
+            track.addEventListener('mouseenter', () => { if (autoplay) stopAutoplay(); });
+            track.addEventListener('mouseleave', () => { if (!prefersReduced && !autoplay) startAutoplay(); });
+
+            if (!prefersReduced) startAutoplay();
+
+            window.addEventListener('resize', () => updateView());
+        })();
+    </script>
+    <script>
+        (function(){
+            try {
+                if ('scrollRestoration' in history) {
+                    history.scrollRestoration = 'manual';
+                }
+            } catch (e) {
+            }
+
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+
+            window.addEventListener('load', function(){
+                setTimeout(function(){ window.scrollTo(0,0); }, 10);
+            });
         })();
     </script>
 </body>
