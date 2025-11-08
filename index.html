@@ -582,14 +582,14 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experiÃ
             const track = carousel && carousel.querySelector('.especialidades-track');
             if (!carousel || !track) return;
 
-            if (preferenciasReduzidas) {
-                return;
-            }
+            if (preferenciasReduzidas) return;
 
             const itens = Array.from(track.children);
             itens.forEach(item => track.appendChild(item.cloneNode(true)));
 
-            const velocidade = 0.5; 
+            // slightly faster on touch devices so the auto-scroll is noticeable
+            const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const velocidade = isTouch ? 1.2 : 0.6;
             let rafId = null;
 
             function passo() {
@@ -600,10 +600,19 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experiÃ
                 rafId = requestAnimationFrame(passo);
             }
 
-            carousel.addEventListener('mouseenter', () => { if (rafId) cancelAnimationFrame(rafId); });
-            carousel.addEventListener('mouseleave', () => { rafId = requestAnimationFrame(passo); });
-            carousel.addEventListener('focusin', () => { if (rafId) cancelAnimationFrame(rafId); });
-            carousel.addEventListener('focusout', () => { rafId = requestAnimationFrame(passo); });
+            // pause when user interacts (mouse or touch) and resume afterwards
+            function pauseAuto(){ if (rafId) cancelAnimationFrame(rafId); rafId = null; }
+            function resumeAuto(){ if (!rafId) rafId = requestAnimationFrame(passo); }
+
+            carousel.addEventListener('mouseenter', pauseAuto);
+            carousel.addEventListener('mouseleave', resumeAuto);
+            carousel.addEventListener('focusin', pauseAuto);
+            carousel.addEventListener('focusout', resumeAuto);
+            carousel.addEventListener('touchstart', pauseAuto, { passive: true });
+            carousel.addEventListener('touchend', resumeAuto, { passive: true });
+
+            // ensure smooth native scrolling on mobile
+            carousel.style['-webkit-overflow-scrolling'] = 'touch';
 
             rafId = requestAnimationFrame(passo);
         })();
