@@ -788,3 +788,76 @@ footer .footer-email {
   }
 }
 }
+/* ================================
+     Estilos para efeito de digitação
+     (comentários e nomes em português para facilitar entendimento)
+     ================================ */
+
+/* Título principal que será digitado (mesma aparencia do h1) */
+#typed {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline;
+    font-weight: 700;
+    color: #fff; /* garante que o texto seja branco por padrão */
+}
+
+/* Palavra destacada dentro do título (ex: "portfólio") */
+.typed-accent {
+    color: var(--accent-color, #1808b1); /* usa a cor de destaque do site */
+}
+
+/* Cursor (caret) piscante usado nos textos digitados */
+.caret {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: currentColor;
+    margin-left: 6px;
+    vertical-align: bottom;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Texto secundário (frases que entram em loop) - menor e branco */
+.typed-sub-wrapper {
+    margin-top: 12px;
+}
+.typed-sub {
+    color: #ffffff; /* letras brancas */
+    font-size: 20px; /* um pouco menor que o h1 */
+    font-weight: 500;
+    text-align: center;
+    display: block;
+}
+
+/* Se o usuário prefere menos movimento, pausa a animação do caret */
+@media (prefers-reduced-motion: reduce) {
+    .caret { animation: none; }
+}
+
+/* -----------------------------
+     Regras para aparição suave ao rolar (reveal)
+     Comentários em português para facilitar a leitura
+     ----------------------------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 600ms ease, transform 600ms ease;
+}
+.reveal.revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* Se o usuário preferir reduzir movimento, não aplicar transições */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}

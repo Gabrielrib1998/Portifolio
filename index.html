@@ -22,8 +22,8 @@
             <nav class="menu">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                     
                 </ul>
@@ -36,11 +36,22 @@
         </div>
     </header>
     <main>
-        <section id="home" class="topo-do-site">
+    <section id="home" class="topo-do-site reveal">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
-                <h1>Bem-vindo ao meu <span>portfólio</span></h1>
+                <h1>
+                    <span id="typed" aria-live="polite"></span>
+                    <span id="caret-main" class="caret" aria-hidden="true"></span>
+                </h1>
+
+                <div class="typed-sub-wrapper" aria-hidden="false">
+                    <p class="typed-sub">
+                        <span id="typed-sub" aria-live="polite"></span>
+                        <span class="caret" aria-hidden="true"></span>
+                    </p>
+                </div>
+
                 <p>Sou um desenvolvedor web apaixonado por criar experiências incríveis<span class="ponto-final">.</span></p>
                 <div class="btn-contato">
                     <a href="https://wa.me/5511978762734?text=Olá!%20quero%20desenvolver%20uma%20ideia." target="_blank" rel="noopener noreferrer">
@@ -54,7 +65,39 @@
             </div>
         </section>
         
-       <section id="especialidades" class="especialidades">
+       <section id="sobre" class="sobre reveal">
+        <div class="interface">
+            <div class="flex">
+                <div class="img-sobre">
+                    <img src="./assets/img/sobre.jpg" alt="Imagem sobre mim">
+                </div>
+                <div class="txt-sobre">
+                    <h2>Muito prazer, <span>Sou Gabriel Ribeiro.</span></h2>
+                    <p>Olá! Meu nome é Gabriel Ribeiro, tenho 27 anos e sou um desenvolvedor web apaixonado por transformar ideias em experiências digitais incríveis. Desde jovem, a tecnologia e seu poder de conectar pessoas me fascinam, uma paixão que me levou diretamente para o universo do desenvolvimento web.
+
+Com domínio em HTML, CSS, JavaScript e React, construo sites e aplicações modernas, responsivas e visualmente impactantes. Sou movido por desafios técnicos e pela busca de soluções criativas para problemas complexos, sempre acreditando que a chave para um projeto de sucesso está na sinergia entre um design intuitivo e uma funcionalidade eficiente.</p>
+
+                    <p>Além das habilidades técnicas, valorizo profundamente a comunicação e o trabalho em equipe. Acredito que a colaboração é o motor para o sucesso, e por isso, estou sempre aberto a aprender com os outros e a compartilhar meu conhecimento.
+
+Estou em uma jornada de constante aprimoramento. Para complementar minha experiência prática, atualmente curso Engenharia de Software na Universidade Eniac, buscando sempre me aprofundar nas últimas tendências e tecnologias do setor. Meu maior objetivo é continuar crescendo como desenvolvedor e contribuir para projetos que façam a diferença.</p>
+
+                    <p>Se você procura um desenvolvedor dedicado, criativo e comprometido com a excelência, vamos conversar. Estou pronto para colaborar e transformar sua visão em uma realidade digital de sucesso!</p>
+                    <div class="btn-social">
+                    <a href="https://www.linkedin.com/in/gabriel-ribeiro-542161376/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/GabrielRib1998" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gabrielribeiro_199_/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    </div>
+            </div>
+        </div>
+       </section>
+
+       <section id="especialidades" class="especialidades reveal">
         <div class="interface">
             <div class="flex">
                 <div class="txt-especialidades">
@@ -97,39 +140,9 @@
         </div>
        </section>
 
-        <section id="sobre" class="sobre">
-        <div class="interface">
-            <div class="flex">
-                <div class="img-sobre">
-                    <img src="./assets/img/sobre.jpg" alt="Imagem sobre mim">
-                </div>
-                <div class="txt-sobre">
-                    <h2>Muito prazer, <span>Sou Gabriel Ribeiro.</span></h2>
-                    <p>Olá! Meu nome é Gabriel Ribeiro, tenho 27 anos e sou um desenvolvedor web apaixonado por transformar ideias em experiências digitais incríveis. Desde jovem, a tecnologia e seu poder de conectar pessoas me fascinam, uma paixão que me levou diretamente para o universo do desenvolvimento web.
+        
 
-Com domínio em HTML, CSS, JavaScript e React, construo sites e aplicações modernas, responsivas e visualmente impactantes. Sou movido por desafios técnicos e pela busca de soluções criativas para problemas complexos, sempre acreditando que a chave para um projeto de sucesso está na sinergia entre um design intuitivo e uma funcionalidade eficiente.</p>
-
-                    <p>Além das habilidades técnicas, valorizo profundamente a comunicação e o trabalho em equipe. Acredito que a colaboração é o motor para o sucesso, e por isso, estou sempre aberto a aprender com os outros e a compartilhar meu conhecimento.
-
-Estou em uma jornada de constante aprimoramento. Para complementar minha experiência prática, atualmente curso Engenharia de Software na Universidade Eniac, buscando sempre me aprofundar nas últimas tendências e tecnologias do setor. Meu maior objetivo é continuar crescendo como desenvolvedor e contribuir para projetos que façam a diferença.</p>
-
-                    <p>Se você procura um desenvolvedor dedicado, criativo e comprometido com a excelência, vamos conversar. Estou pronto para colaborar e transformar sua visão em uma realidade digital de sucesso!</p>
-                    <div class="btn-social">
-                    <a href="https://www.linkedin.com/in/gabriel-ribeiro-542161376/" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/GabrielRib1998" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/gabrielribeiro_199_/" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    </div>
-            </div>
-        </div>
-       </section>
-
-        <section id="projetos" class="projetos">
+    <section id="projetos" class="projetos reveal">
           <div class="interface">
             <h2 class="titulo">Meus <span>Projetos.</span></h2>
                 <div class="flex">
@@ -170,5 +183,156 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi�
     </div> 
   </div>
 </footer>
-</body>  
+    <script>
+        /*
+         Script de digitação em português:
+         - digita o título principal uma vez (destaque em "portfólio")
+         - logo abaixo, em `#typed-sub`, fica um loop contínuo que digita e apaga
+         - respeita a preferência do usuário por reduzir movimento
+        */
+        (function(){
+            // --- configurações (ajuste se quiser) ---
+            const titulo = 'Bem-vindo ao meu portfólio'; // texto do título
+
+            // Frases em português para o loop secundário (você pode editar ou adicionar)
+            const frases = [
+                'transformando ideias',
+                'soluções inteligentes',
+                'interfaces responsivas',
+                'produtos que encantam',
+                'criando experiências digitais'
+            ];
+
+            const typedMain = document.getElementById('typed');
+            const typedSub = document.getElementById('typed-sub');
+            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Função para envolver a palavra "portfólio" com a classe de destaque
+            function destacarPortifolio(texto){
+                return texto.replace(/(port[fíi]lio|portfólio)/i, '<span class="typed-accent">$&</span>');
+            }
+
+            // Se for preferencia por menos movimento, apenas mostra os textos sem animação
+            if (prefersReduced) {
+                if (typedMain) typedMain.innerHTML = destacarPortifolio(titulo);
+                if (typedSub) typedSub.textContent = frases[0];
+                return;
+            }
+
+            // --- Digitar o título principal (apenas uma vez) ---
+            function typeOnce(element, text, speed = 70, callback){
+                if (!element) { if (callback) callback(); return; }
+                let i = 0;
+                function step(){
+                    if (i <= text.length) {
+                        element.textContent = text.slice(0, i);
+                        i++;
+                        setTimeout(step, speed);
+                    } else {
+                        // quando terminar, aplica destaque na palavra portfólio
+                        element.innerHTML = destacarPortifolio(text);
+                        if (callback) callback();
+                    }
+                }
+                step();
+            }
+
+            // --- Loop de digitar e apagar para várias frases ---
+            function loopTyping(element, listaFrases, opts){
+                if (!element) return;
+                const speedType = opts.speedType || 60;
+                const speedDelete = opts.speedDelete || 30;
+                const pauseAfter = opts.pauseAfter || 1200;
+                let fraseIndex = 0;
+
+                function typePhrase(frase, cb){
+                    let j = 0;
+                    function forward(){
+                        if (j <= frase.length){
+                            element.textContent = frase.slice(0, j);
+                            j++;
+                            setTimeout(forward, speedType);
+                        } else {
+                            setTimeout(() => cb && cb(), pauseAfter);
+                        }
+                    }
+                    forward();
+                }
+
+                function deletePhrase(cb){
+                    let cur = element.textContent;
+                    function back(){
+                        if (cur.length > 0){
+                            cur = cur.slice(0, -1);
+                            element.textContent = cur;
+                            setTimeout(back, speedDelete);
+                        } else {
+                            setTimeout(() => cb && cb(), 200);
+                        }
+                    }
+                    back();
+                }
+
+                // fluxo: digita -> pausa -> apaga -> próxima frase (loop infinito)
+                function next(){
+                    const frase = listaFrases[fraseIndex % listaFrases.length];
+                    typePhrase(frase, () => {
+                        deletePhrase(() => {
+                            fraseIndex++;
+                            next();
+                        });
+                    });
+                }
+
+                next();
+            }
+
+            // Executa: primeiro digita o título, depois inicia o loop do secundário
+            typeOnce(typedMain, titulo, 70, function(){
+                // Quando o título terminar de ser digitado, escondemos o caret do título
+                // para que fique apenas o caret do texto secundário em loop.
+                const caretPrincipal = document.getElementById('caret-main');
+                if (caretPrincipal) {
+                    // Esconde completamente o caret do título
+                    caretPrincipal.style.display = 'none';
+                }
+
+                // inicia loop das frases após pequeno atraso
+                setTimeout(function(){
+                    loopTyping(typedSub, frases, { speedType: 60, speedDelete: 30, pauseAfter: 1200 });
+                }, 600);
+            });
+
+        })();
+    </script>
+    <script>
+        /*
+         Script em português para aparição suave ao rolar (scroll reveal)
+         - Observa elementos com a classe .reveal
+         - Quando um elemento entra na viewport, adiciona a classe .revealed
+         - Respeita prefers-reduced-motion: caso ativado, revela tudo imediatamente
+        */
+        (function(){
+            const preferenciasReduzidas = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const elementos = document.querySelectorAll('.reveal');
+
+            if (preferenciasReduzidas) {
+                // Se o usuário prefere menos movimento, mostra tudo sem animação
+                elementos.forEach(el => el.classList.add('revealed'));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entradas, obs) => {
+                entradas.forEach(entrada => {
+                    if (entrada.isIntersecting) {
+                        entrada.target.classList.add('revealed');
+                        obs.unobserve(entrada.target);
+                    }
+                });
+            }, { threshold: 0.12 }); // revela quando ~12% do elemento estiver visível
+
+            elementos.forEach(el => observer.observe(el));
+        })();
+    </script>
+</body>
 </html>
