@@ -577,44 +577,40 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experi√
 
     <script>
         (function(){
-            const preferenciasReduzidas = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            const carousel = document.querySelector('.especialidades-box-carousel');
-            const track = carousel && carousel.querySelector('.especialidades-track');
-            if (!carousel || !track) return;
+            (function(){
+                const preferenciasReduzidas = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                const carousel = document.querySelector('.especialidades-box-carousel');
+                const track = carousel && carousel.querySelector('.especialidades-track');
+                if (!carousel || !track) return;
 
-            if (preferenciasReduzidas) return;
-
-            const itens = Array.from(track.children);
-            itens.forEach(item => track.appendChild(item.cloneNode(true)));
-
-            // slightly faster on touch devices so the auto-scroll is noticeable
-            const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-            const velocidade = isTouch ? 1.2 : 0.6;
-            let rafId = null;
-
-            function passo() {
-                carousel.scrollLeft += velocidade;
-                if (carousel.scrollLeft >= (track.scrollWidth / 2)) {
-                    carousel.scrollLeft = 0;
+                if (preferenciasReduzidas) {
+                    carousel.style.overflowX = 'auto';
+                    return;
                 }
-                rafId = requestAnimationFrame(passo);
-            }
 
-            // pause when user interacts (mouse or touch) and resume afterwards
-            function pauseAuto(){ if (rafId) cancelAnimationFrame(rafId); rafId = null; }
-            function resumeAuto(){ if (!rafId) rafId = requestAnimationFrame(passo); }
+                const itens = Array.from(track.children);
+                itens.forEach(item => track.appendChild(item.cloneNode(true)));
 
-            carousel.addEventListener('mouseenter', pauseAuto);
-            carousel.addEventListener('mouseleave', resumeAuto);
-            carousel.addEventListener('focusin', pauseAuto);
-            carousel.addEventListener('focusout', resumeAuto);
-            carousel.addEventListener('touchstart', pauseAuto, { passive: true });
-            carousel.addEventListener('touchend', resumeAuto, { passive: true });
+                function setupMarquee(){
+                    const oneSetWidth = track.scrollWidth / 2;
+                    const pxPerSec = 400;
+                    const durationSec = Math.max(4, oneSetWidth / pxPerSec);
+                    track.style.setProperty('--scroll-duration', durationSec + 's');
+                    track.classList.add('marquee');
+                }
 
-            // ensure smooth native scrolling on mobile
-            carousel.style['-webkit-overflow-scrolling'] = 'touch';
+                function initWhenReady(){
+                    setTimeout(setupMarquee, 80);
+                }
 
-            rafId = requestAnimationFrame(passo);
+                if (document.readyState === 'complete') initWhenReady();
+                else window.addEventListener('load', initWhenReady);
+                window.addEventListener('resize', () => {
+                    track.classList.remove('marquee');
+                    clearTimeout(window.__marqueeResize);
+                    window.__marqueeResize = setTimeout(() => setupMarquee(), 120);
+                });
+            })();
         })();
     </script>
     <script>
