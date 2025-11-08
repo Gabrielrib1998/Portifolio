@@ -409,7 +409,7 @@ section.topo-do-site .flex{
 
 @keyframes scroll-left {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to   { transform: translateX(var(--marquee-distance, -50%)); }
 }
 
 .especialidades-box-carousel .card,

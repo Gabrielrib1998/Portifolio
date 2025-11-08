@@ -593,8 +593,10 @@ Estou em uma jornada de constante aprimoramento. Para complementar minha experiÃ
 
                 function setupMarquee(){
                     const oneSetWidth = track.scrollWidth / 2;
-                    const pxPerSec = 400;
-                    const durationSec = Math.max(4, oneSetWidth / pxPerSec);
+                    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+                    const pxPerSec = isTouch ? 200 : 100; 
+                    const durationSec = Math.max(3, oneSetWidth / pxPerSec);
+                    track.style.setProperty('--marquee-distance', '-' + oneSetWidth + 'px');
                     track.style.setProperty('--scroll-duration', durationSec + 's');
                     track.classList.add('marquee');
                 }
